@@ -10,10 +10,11 @@ public class PickUp : MonoBehaviour
 
     void Start()
     {
-        //
+        //finds the GameObject with the tag "Player"
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); 
     }
 
+    //this activates when the player collides with an object that is in trigger mode
     private void OnTriggerEnter2D(Collider2D other)
     {
         //checks for the player tag
@@ -27,9 +28,11 @@ public class PickUp : MonoBehaviour
                 {
                     //makes the inventory slot currently selected (full)
                     inventory.isFull[i] = true;
+                    //this instantiates/creates the sprite in the inventory box
                     Instantiate(item, inventory.slots[i].transform, false);
+                    //this destroys the item that collided with the player
                     Destroy(gameObject);
-                    //breaks the process to not repeat for ever
+                    //breaks the process for it to not repeat forever
                     break;
                 }
             }
