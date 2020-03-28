@@ -1634,6 +1634,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb82392512ee1104f8d8fc4a3c9b65c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextBox: {fileID: 0}
+  Text: {fileID: 0}
+  CanMove: 0
+  timer: 0
   speed: 4
   InteractionObj: {fileID: 1606319557675460, guid: 585df423722839a4395139310433843d,
     type: 2}
@@ -2910,7 +2914,7 @@ GameObject:
   - component: {fileID: 987208208}
   - component: {fileID: 987208207}
   m_Layer: 5
-  m_Name: Text Object
+  m_Name: TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
