@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - door
+  - Interactable
+  - Item Menu
+  - Tool
+  - Environment
+  - Material
+  - Puzzle
   layers:
   - Default
   - TransparentFX
@@ -14,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Entities
+  - Props
+  - Background
+  - PlayerColliders
   - 
   - 
   - 
