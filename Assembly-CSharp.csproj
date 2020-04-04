@@ -54,10 +54,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ChangePositionIndex.cs" />
-     <Compile Include="Assets\Dialogue System\Dialogue.cs" />
-     <Compile Include="Assets\Dialogue System\DialogueManager.cs" />
-     <Compile Include="Assets\Dialogue System\DialogueTrigger.cs" />
-     <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\LoadScene.cs" />
      <Compile Include="Assets\MovePanel.cs" />
      <Compile Include="Assets\Quit.cs" />
