@@ -9,7 +9,6 @@ public class PlayerInteraction : MonoBehaviour
     public Image TextBox;
     public GameObject Text;
     public bool CanMove;
-    public float timer;
     public float speed;
     public GameObject InteractionObj;
     public Vector3 DirFace;
@@ -49,9 +48,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (!CanMove)
         {
-            timer += Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.Space) && timer >= .1f)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 CanMove = true;
                 Text.GetComponent<TextMeshProUGUI>().text = "";
