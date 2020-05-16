@@ -44,17 +44,6 @@ public class PlayerInteraction : MonoBehaviour
                 }
             }
         }
-
-
-        if (!CanMove)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                CanMove = true;
-                Text.GetComponent<TextMeshProUGUI>().text = "";
-                TextBox.enabled = false;
-            }
-        }
     }
     IEnumerator Interact()
     {

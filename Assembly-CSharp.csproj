@@ -58,12 +58,14 @@
      <Compile Include="Assets\LoadScene.cs" />
      <Compile Include="Assets\MovePanel.cs" />
      <Compile Include="Assets\Quit.cs" />
+     <Compile Include="Assets\Scripts\ActivateDialogueAtLine.cs" />
      <Compile Include="Assets\Scripts\BaseInteraction.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\ChoreList.cs" />
      <Compile Include="Assets\Scripts\Destroyable.cs" />
-     <Compile Include="Assets\Scripts\DialogueReader.cs" />
+     <Compile Include="Assets\Scripts\DialogueItemReader.cs" />
      <Compile Include="Assets\Scripts\DialogueText.cs" />
+     <Compile Include="Assets\Scripts\DialogueTextReader.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\HasItem.cs" />
      <Compile Include="Assets\Scripts\Interaction.cs" />
@@ -117,6 +119,7 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\Resources\Text Files\Dialogue.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />

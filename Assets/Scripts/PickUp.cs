@@ -52,5 +52,11 @@ public class PickUp : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+            {
+                move.CanMove = true;
+                Text.GetComponent<TextMeshProUGUI>().text = "";
+                TextBox.enabled = false;
+            }
     }
 }
