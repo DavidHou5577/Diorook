@@ -7,19 +7,21 @@ using TMPro;
 public class PickUp : MonoBehaviour
 {
     public Image TextBox;
-    public GameObject Text;
-    public PlayerInteraction move;
+    public TextMeshProUGUI Text;
+    public PlayerInteraction player;
     public ObjectDataCache ObjectData;
-    private Inventory inventory;
+    public Inventory inventory;
     public GameObject item;
+	public TextAsset TheText;
+	public int StartLine;
+	public int EndLine;
+	public DialogueTextReader TheTextBox;
 
     void OnEnable()
     {
-        Text = GameObject.Find("Text");
-        TextBox = GameObject.Find("TextBox").GetComponent<Image>();
-        move = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
+        TheTextBox = FindObjectOfType<DialogueTextReader>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        OnText();
+        ObjectData = GetComponent<ObjectDataCache>();
         GetItem();
     }
 
@@ -39,24 +41,19 @@ public class PickUp : MonoBehaviour
         this.enabled = false;
     }
 
-    void OnText()
-    {
+
+        void OnTriggerEnter2D(Collider2D other)
+	{
         for (int i = 0; i < inventory.slots.Length; i++)
         {
-            if (inventory.isFull[i] == false)
-            {
-                ObjectData = GetComponent<ObjectDataCache>();
-                Text.GetComponent<TextMeshProUGUI>().text = ObjectData.thisObject.myName + "\n" + ObjectData.thisObject.myDesc;
-                TextBox.enabled = true;
-                move.CanMove = false;
-            }
+	    	if (inventory.isFull[i] == false && other.name == "Player Interaction Obj(Clone)")
+	    	{
+	    		TheTextBox.ReloadScript(TheText);
+    			TheTextBox.CurrentLine = StartLine;
+    			TheTextBox.EndAtLine = EndLine;
+    			TheTextBox.EnableTextBox();
+                break;
+    		}
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            {
-                move.CanMove = true;
-                Text.GetComponent<TextMeshProUGUI>().text = "";
-                TextBox.enabled = false;
-            }
-    }
+	}
 }

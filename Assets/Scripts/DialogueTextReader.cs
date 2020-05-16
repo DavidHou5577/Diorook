@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 [System.Serializable]
 public class DialogueTextReader : MonoBehaviour{
 
-	public GameObject textBox;
+	public GameObject TextBox;
 	public TextMeshProUGUI TheText;
 
     public TextAsset DialogueFile;
@@ -20,12 +21,13 @@ public class DialogueTextReader : MonoBehaviour{
 
     void Start()
     {
-		textBox = GameObject.Find("TextBox");
+		//TheText = GameObject.Find("Text").GetComponent<TextMeshProUGUI>();
+		TextBox = GameObject.Find("TextBox");
 		move = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
 		
         if (DialogueFile != null)
         {
-            DialogueLines = (DialogueFile.text.Split('\n'));
+            DialogueLines = (DialogueFile.text.Split('/'));
         }
 
 		if (EndAtLine == 0)
@@ -65,15 +67,24 @@ public class DialogueTextReader : MonoBehaviour{
 
 	public void EnableTextBox()
 	{
-		textBox.SetActive(true);
-
+		TextBox.SetActive(true);
 		move.CanMove = false;
+		IsActive = true;
 	}
 
 	public void DisableTextBox()
 	{
-		textBox.SetActive(false);
-
+		TextBox.SetActive(false);
 		move.CanMove = true;
+		IsActive = false;
+	}
+
+	public void ReloadScript(TextAsset TheText)
+	{
+		if (TheText != null)
+		{
+			DialogueLines = new string[1];
+			DialogueLines = (TheText.text.Split('/'));
+		}
 	}
 }

@@ -929,7 +929,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4284453305492400, guid: ce1b979b78639334f933e2ec97359e6f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1b979b78639334f933e2ec97359e6f, type: 2}
@@ -1650,14 +1650,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb82392512ee1104f8d8fc4a3c9b65c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextBox: {fileID: 0}
-  Text: {fileID: 0}
-  CanMove: 0
+  CanMove: 1
   speed: 4
+  TextBox: {fileID: 0}
   InteractionObj: {fileID: 1606319557675460, guid: 585df423722839a4395139310433843d,
     type: 2}
   DirFace: {x: 0, y: 0, z: 0}
   caninteract: 1
+  OnPickUp: 0
 --- !u!4 &327838437
 Transform:
   m_ObjectHideFlags: 0
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb41ff2a9057a2438abca20a83ebe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBox: {fileID: 0}
+  TextBox: {fileID: 0}
   TheText: {fileID: 12311058}
   DialogueFile: {fileID: 4900000, guid: c356763a3596a2043bdc2a2b4c78fbca, type: 3}
   DialogueLines: []
@@ -2486,7 +2486,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4972595336704176, guid: c7dcd15df73fe67409a6116180595696, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: StartLine
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EndLine
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7dcd15df73fe67409a6116180595696, type: 2}
@@ -2754,7 +2762,40 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: TheText
+      value: 
+      objectReference: {fileID: 4900000, guid: 378c45d907add1f4bbd97dcace7f49ab, type: 3}
+    - target: {fileID: 0}
+      propertyPath: EndLine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61781797085305300, guid: 43553e23a5d0e66479e9c54d9e87d09c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TheText
+      value: 
+      objectReference: {fileID: 4900000, guid: 378c45d907add1f4bbd97dcace7f49ab, type: 3}
+    - target: {fileID: 0}
+      propertyPath: EndLine
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406801495011282, guid: 43553e23a5d0e66479e9c54d9e87d09c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406801495011282, guid: 43553e23a5d0e66479e9c54d9e87d09c,
+        type: 2}
+      propertyPath: EndLine
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 43553e23a5d0e66479e9c54d9e87d09c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &741807622 stripped
@@ -3017,7 +3058,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378255265229248, guid: a097a9e0a7f36054d919db191b06ad8a, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a097a9e0a7f36054d919db191b06ad8a, type: 2}
@@ -5440,7 +5481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4231675324196756, guid: 719ccfe26f4c5ad42a7f9145d3e0721c, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719ccfe26f4c5ad42a7f9145d3e0721c, type: 2}
