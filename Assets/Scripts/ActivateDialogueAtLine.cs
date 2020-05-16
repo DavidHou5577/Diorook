@@ -8,27 +8,33 @@ public class ActivateDialogueAtLine : MonoBehaviour {
 	public int StartLine;
 	public int EndLine;
 	public DialogueTextReader TheTextBox;
+	public bool off;
+	public bool HasBat;
 
 	// Use this for initialization
-	void Start () 
-	{
-		TheTextBox = FindObjectOfType<DialogueTextReader>();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnEnable()
 	{
-		if (other.name == "Player Interaction Obj(Clone)")
+		if (HasBat)
 		{
-			TheTextBox.ReloadScript(TheText);
+			TheTextBox = FindObjectOfType<DialogueTextReader>();
+			TheTextBox.CurrentLine = 7;
+		}
+		if(!off)
+		{
+			this.enabled = false;
+			off = true;
+			return;
+		}
+		
+		if(off)
+		{
+			TheTextBox = FindObjectOfType<DialogueTextReader>();
 			TheTextBox.CurrentLine = StartLine;
 			TheTextBox.EndAtLine = EndLine;
 			TheTextBox.EnableTextBox();
-		}
+			off = false;
+			this.enabled = false;
+		}		
 	}
 }

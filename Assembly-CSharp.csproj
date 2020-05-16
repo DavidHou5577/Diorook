@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ChangePositionIndex.cs" />
+     <Compile Include="Assets\EndTutorial.cs" />
      <Compile Include="Assets\InventoryPrefab.cs" />
      <Compile Include="Assets\LoadScene.cs" />
      <Compile Include="Assets\MovePanel.cs" />

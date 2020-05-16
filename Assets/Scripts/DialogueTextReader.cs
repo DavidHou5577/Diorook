@@ -21,7 +21,6 @@ public class DialogueTextReader : MonoBehaviour{
 
     void Start()
     {
-		//TheText = GameObject.Find("Text").GetComponent<TextMeshProUGUI>();
 		TextBox = GameObject.Find("TextBox");
 		move = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
 		
