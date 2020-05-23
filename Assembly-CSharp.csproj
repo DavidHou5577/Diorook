@@ -55,6 +55,8 @@
   <ItemGroup>
      <Compile Include="Assets\ChangePositionIndex.cs" />
      <Compile Include="Assets\EndTutorial.cs" />
+     <Compile Include="Assets\GetBat.cs" />
+     <Compile Include="Assets\HasBatTutorial.cs" />
      <Compile Include="Assets\InventoryPrefab.cs" />
      <Compile Include="Assets\LoadScene.cs" />
      <Compile Include="Assets\MovePanel.cs" />
@@ -120,7 +122,7 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
-     <None Include="Assets\Resources\Text Files\Dialogue.txt" />
+     <None Include="Assets\Resources\Text Files\Tutorial.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />

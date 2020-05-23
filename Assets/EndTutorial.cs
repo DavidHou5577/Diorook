@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class EndTutorial : MonoBehaviour {
 
+public bool HasBat;
+public GameObject Chores;
 public GameObject[] items;
-public GameObject[] DestroyItems;
-
-void OnEnable()
+public GameObject[] Tutorialitems;
+	private void OnEnable()
 	{
-		for (int i = 0; i < items.Length; i++)
+		if (HasBat)
 		{
-			items[i].GetComponent<PickUp>().Tutorial = false;
-			items[i].GetComponent<PickUp>().enabled = false;
-		}
+			for (int i = 0; i < Tutorialitems.Length; i++)
+			{
+				Tutorialitems[i].SetActive(false);
+			}
 
-		for (int i = 0; i < DestroyItems.Length; i++)
-		{
-			Destroy(DestroyItems[i]);
+			for (int i = 0; i < items.Length; i++)
+			{
+				items[i].GetComponent<PickUp>().Tutorial = false;
+				items[i].GetComponent<PickUp>().enabled = false;
+			}
+
+			Chores.SetActive(true);
 		}
-		
 	}
+
 }
