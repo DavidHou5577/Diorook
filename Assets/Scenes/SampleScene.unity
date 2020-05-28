@@ -6457,7 +6457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72e2a6a588327547af6a0c89eda7258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HasBat: 1
+  HasBat: 0
   Chores: {fileID: 1320881376}
   items:
   - {fileID: 1743332624}
