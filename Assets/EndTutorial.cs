@@ -8,7 +8,8 @@ public bool HasBat;
 public GameObject Chores;
 public GameObject[] items;
 public GameObject[] Tutorialitems;
-	private void OnEnable()
+	
+	void OnEnable()
 	{
 		if (HasBat)
 		{
@@ -25,6 +26,8 @@ public GameObject[] Tutorialitems;
 
 			Chores.SetActive(true);
 		}
+		
+		this.enabled = false;
 	}
 
 }
