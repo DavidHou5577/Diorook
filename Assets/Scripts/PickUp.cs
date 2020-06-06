@@ -28,7 +28,6 @@ public class PickUp : MonoBehaviour
         TheTextBox.ReloadScript(TheText);
    	    TheTextBox.CurrentLine = StartLine;
    	   	TheTextBox.EndAtLine = EndLine;
-    	TheTextBox.EnableTextBox();
     }
 
     void GetItem()
@@ -36,7 +35,8 @@ public class PickUp : MonoBehaviour
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
-            {
+            {        
+            	TheTextBox.EnableTextBox();
                 inventory.isFull[i] = true;
                 GameObject obj = Instantiate(item, inventory.slots[i].transform, false);
                 obj.name = obj.name.Replace("(Clone)", "").Trim();

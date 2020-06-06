@@ -140,7 +140,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.93, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2004742054}
   m_Father: {fileID: 1106961793}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4166,6 +4167,9 @@ MonoBehaviour:
   Chores: {fileID: 0}
   items: []
   Tutorialitems: []
+  item: {fileID: 0}
+  Inventory: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!114 &1074512622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4364,6 +4368,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1097436351}
   m_CullTransparentMesh: 0
+--- !u!1 &1102792183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102792184}
+  m_Layer: 10
+  m_Name: Bookcase (Tutorial)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1102792184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102792183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1776046008}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103182123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,6 +6504,9 @@ MonoBehaviour:
   - {fileID: 2107875345}
   - {fileID: 328199229}
   - {fileID: 194321444}
+  item: {fileID: 1377195915624166, guid: 43553e23a5d0e66479e9c54d9e87d09c, type: 2}
+  Inventory: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!61 &1629065601
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6824,6 +6859,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825294722}
   m_CullTransparentMesh: 0
+--- !u!1 &2004742053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004742054}
+  m_Layer: 10
+  m_Name: Dresser (Tutorial)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004742054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004742053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1752412}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084719009
 GameObject:
   m_ObjectHideFlags: 0
